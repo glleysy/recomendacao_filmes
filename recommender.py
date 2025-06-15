@@ -35,7 +35,7 @@ def pre_process_movie_file(path='movies_metadata.csv'):
     return movie_file.fillna(' ')
 
 
-def collaborative_recommender(ratings_df, movie_df, top_k_users=10, top_n_movies=10, min_movies_rated=200, frac=0.25):
+def collaborative_recommender(ratings_df, movie_df, top_k_users=10, top_n_movies=10, min_movies_rated=150, frac=0.5):
     # Count number of movies rated by each user
     rated_counts = ratings_df.groupby('userId').size()
 
